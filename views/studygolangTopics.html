@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/css/semantic.min.css">
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/static/js/semantic.min.js"></script>
+    <title>Study Golang</title>
+</head>
+
+<body>
+    <div class="ui raised container segment">
+        <img class="ui small image" src="https://static.studygolang.com/img/logo1.png">
+        <div class="ui celled list">
+            {{range .}}
+            <div class="item">
+                <img class="ui avatar image" src="{{.ImgSrc}}">
+                <div class="middle aligned content">
+                    <h3>
+                        <a href="http://studygolang.com{{.URL}}" title="{{.Title}}" target="_blank">{{.Title}}</a>
+                    </h3>
+                </div>
+            </div>
+            {{end}}
+        </div>
+    </div>
+</body>
+
+</html>
