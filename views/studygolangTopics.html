@@ -2,27 +2,29 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="/static/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/static/css/semantic.min.css">
-    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="/static/js/semantic.min.js"></script>
-    <title>Study Golang</title>
+    {{ template "header" }}
+    <title>Study Golang Topics</title>
 </head>
 
 <body>
-    <div class="ui raised container segment">
-        <img class="ui small image" src="https://static.studygolang.com/img/logo1.png">
-        <div class="ui celled list">
-            {{range .}}
-            <div class="item">
-                <img class="ui avatar image" src="{{.ImgSrc}}">
-                <div class="middle aligned content">
-                    <h3>
-                        <a href="http://studygolang.com{{.URL}}" title="{{.Title}}" target="_blank">{{.Title}}</a>
-                    </h3>
+    <div class="ui grid">
+        <div class="ui raised container segment">
+            <img class="ui small image" src="http://static.studygolang.com/img/logo1.png">
+            <div class="ui celled list">
+                {{range .}}
+                <div class="item">
+                    <img class="ui avatar image" src="{{.ImgSrc}}">
+                    <div class="middle aligned content">
+                        <h3>
+                            <a href="http://studygolang.com{{.URL}}" title="{{.Title}}" target="_blank">{{.Title}}</a>
+                        </h3>
+                    </div>
                 </div>
+                {{end}}
             </div>
-            {{end}}
+        </div>
+        <div class="ui raised segment">
+            {{ template "menu" }}
         </div>
     </div>
 </body>

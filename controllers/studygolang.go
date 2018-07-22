@@ -45,8 +45,8 @@ func ScrapyStudyGolangArticles(c *gin.Context) {
 	articles := make([]models.StudyGolangAticles, 0, 100)
 	urlPages := "http://studygolang.com/articles?p=%d"
 
-	for _, v := range []int{1, 2, 3, 4, 5} {
-		response, err := http.Get(fmt.Sprintf(urlPages, v))
+	for page := 1; page <= 5; page++ {
+		response, err := http.Get(fmt.Sprintf(urlPages, page))
 		if err != nil {
 			log.Fatal(err)
 		}

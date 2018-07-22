@@ -3,19 +3,19 @@
 
 <head>
     {{template "header" }}
-    <title>Study Golang Articles</title>
+    <title>Opensource Articles</title>
 </head>
 
 <body>
     <div class="ui grid">
         <div class="ui raised container segment">
-            <img class="ui small image" src="http://static.studygolang.com/img/logo1.png">
+            <h1>OpenSource</h1>
             <div class="ui celled list">
                 {{range .}}
                 <div class="item">
                     <div class="middle aligned content">
                         <h3>
-                            <a href="http://studygolang.com{{.URL}}" title="{{.Title}}" target="_blank">{{.Title}}</a>
+                            <a href="https://opensource.com{{.URL}}" title="{{.Title}}" target="_blank">{{.Title}}</a>
                         </h3>
                         <div class="description">{{.Description}}</div>
                     </div>

@@ -1,0 +1,45 @@
+{{ define "header" }}
+
+<link rel="stylesheet" href="/static/css/font-awesome.min.css">
+<link rel="stylesheet" href="/static/css/semantic.min.css">
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="/static/js/semantic.min.js"></script>
+
+{{ end }}
+
+{{ define "menu" }}
+
+<p align="center">
+    <img class="ui tiny image" src="/static/img/logo.png">
+</p>
+<div class="ui vertical menu">
+    <div class="item">
+        <div class="ui header">Go语言中文网</div>
+        <div class="menu">
+            <p>
+                <a class="item" href="/crawlers/studygolang/topics">论坛主题</a>
+            </p>
+            <p>
+                <a class="item" href="/crawlers/studygolang/articles">文章</a>
+            </p>
+        </div>
+    </div>
+    <div class="item">
+        <div class="ui header">Go中国</div>
+        <div class="menu">
+            <p>
+                <a class="item" href="/crawlers/golangtc/topics">论坛主题</a>
+            </p>
+        </div>
+    </div>
+    <div class="item">
+        <div class="ui header">OpenSource</div>
+        <div class="menu">
+            <p>
+                <a class="item" href="/crawlers/opensource/articles">文章</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+{{ end }}
